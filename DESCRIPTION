@@ -1,0 +1,24 @@
+Package: climate4R.UTCI
+Type: Package
+Title: Universal Thermal Climate Index Calculation for climate4R Data
+Version: 0.1.0
+Date: 2026-03-17
+Authors@R: as.person(c(
+    "Santander Meteorology Group <http://meteo.unican.es> [cph]",
+    "Carmen Rodríguez-Rumayor <rodriguezmac@unican.es> [aut,cre]"))
+Description:
+    A climate4R wrapper of the 'UTCIr' package by ECA&D implementing the Universal Thermal Climate Index (UTCI).
+License: GPL-3
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.3
+Depends:
+    R (>= 4.0.0)
+Imports:
+    transformeR,
+    magrittr,
+    parallel,
+    udunits2,
+    convertR,
+    UTCIr
+BugReports: https://github.com/crodriguezrumayor/climate4R.UTCI/issues
