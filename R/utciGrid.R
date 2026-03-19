@@ -39,10 +39,11 @@
 #' data("ERA5_day_hurs", package = "climate4R.UTCI")
 #' data("ERA5_day_sfcwind", package = "climate4R.UTCI")
 #' data("ERA5_day_ssrd", package = "climate4R.UTCI")
+#' data("ERA5_lsm", package = "climate4R.UTCI")       # optional land-sea mask
 #'
 #' utci <- utciGrid(tmax = ERA5_day_t2mx, tmin = ERA5_day_t2mn,
 #'                  hurs = ERA5_day_hurs, wind = ERA5_day_sfcwind,
-#'                  radiation = ERA5_day_ssrd)
+#'                  radiation = ERA5_day_ssrd, mask = ERA5_lsm)
 #' }
 #'
 #' @author climate4R adaptation by C. Rodriguez-Rumayor.
@@ -80,7 +81,7 @@ utciGrid <- function(tmax,
         stop("All input variables must be of the same type (either grid or station).")
     }
 
-    if(is.null(mask)) message("NOTE: No mask provided. UTCI values over sea may be inaccurate.")
+    if(is.null(mask)) message("NOTE: No mask provided. If present, UTCI values over sea may be inaccurate.")
 
     # Convert inputs to required units (if needed)
     for (temp in c("tmax", "tmin")) {

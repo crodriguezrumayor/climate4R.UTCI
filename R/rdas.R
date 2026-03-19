@@ -52,3 +52,14 @@ NULL
 #' @docType data
 #' @keywords data
 NULL
+
+#' ERA5 land-sea mask
+#'
+#' @description A binary climate4R grid with the ERA5 land-sea mask (1 = land, 0 = sea).
+#'
+#' @format A climate4R grid object
+#' @source ERA5 reanalysis data
+#' @name ERA5_lsm
+#' @docType data
+#' @keywords data
+NULL

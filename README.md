@@ -33,10 +33,11 @@ data("ERA5_day_tmin", package = "climate4R.UTCI")
 data("ERA5_day_hurs", package = "climate4R.UTCI")
 data("ERA5_day_sfcwind", package = "climate4R.UTCI")
 data("ERA5_day_ssrd", package = "climate4R.UTCI")
+data("ERA5_lsm", package = "climate4R.UTCI")       # optional land-sea mask
 
 utci <- utciGrid(tmax = ERA5_day_tmax, tmin = ERA5_day_tmin,
                  hurs = ERA5_day_hurs, wind = ERA5_day_sfcwind,
-                 radiation = ERA5_day_ssrd)
+                 radiation = ERA5_day_ssrd, mask = ERA5_lsm)
 ```
 
 ## References
